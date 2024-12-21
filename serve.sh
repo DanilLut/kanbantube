@@ -3,5 +3,5 @@
 HOST="0.0.0.0"
 PORT="8080"
 
-waitress-serve --host="$HOST" --port="$PORT" --call main:create_app
+./.venv/bin/waitress-serve --host="$HOST" --port="$PORT" --call main:create_app
 
