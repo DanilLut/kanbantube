@@ -28,7 +28,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-5. Rename `.env.example` to `.env` and put your [YouTube API key](https://console.cloud.google.com/apis/library) there
+5. Put OAuth 2.0 `client_secret.json` file in the root directory
 
 5. Run the server
 
