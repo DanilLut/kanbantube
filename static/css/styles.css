@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.input-section {
+    padding: 20px;
+    background: #007BFF;
+    color: white;
+    text-align: center;
+}
+.input-section input {
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+}
+.input-section button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.board-section, .video-list-section {
+    padding: 20px;
+}
+.board {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: flex-start;
+    overflow-x: auto;
+}
+.column {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.column h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    cursor: grab;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card.dragging {
+    opacity: 0.5;
+}
+.initial-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.initial-list .card {
+    width: 300px;
+}

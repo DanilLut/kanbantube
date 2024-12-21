@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanbanTube</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="input-section">
+        <h1>KanbanTube</h1>
+        <input id="boardName" type="text" placeholder="Enter Board Name" value="Untitled YT Board">
+        <input id="playlistUrl" type="text" placeholder="Enter YouTube Playlist URL">
+        <button id="generateButton">Generate Board</button>
+    </div>
+    <div class="video-list-section">
+        <h2>Initial Video List</h2>
+        <div class="initial-list"></div>
+    </div>
+    <div class="board-section">
+        <button id="addColumn" style="margin: 20px; padding: 10px;">Add Section</button>
+        <button id="exportData" style="margin: 20px; padding: 10px;">Export Board</button>
+        <button id="importData" style="margin: 20px; padding: 10px;">Import Board</button>
+        <div class="board"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
