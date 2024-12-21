@@ -2,27 +2,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #111111;
+    color: white;
 }
 .input-section {
-    padding: 20px;
-    background: #007BFF;
+    padding: 30px 20px;
+    background: #CD201F;
     color: white;
     text-align: center;
 }
 .input-section input {
     padding: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     width: 300px;
 }
 .input-section button {
-    padding: 10px 20px;
-    margin-top: 10px;
     cursor: pointer;
 }
 .board-section, .video-list-section {
-    padding: 20px;
+    padding: 10px 20px;
+    justify-content: center;
 }
+
+.video-list-section {
+    text-align: center;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+.board-section-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .board {
     display: flex;
     gap: 10px;
@@ -32,31 +48,32 @@ body {
 }
 .column {
     flex: 0 0 300px;
-    background: #fff;
+    background: #171717;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    padding-bottom: 12px;
+    min-width: 325px;
+    align-items: center;
 }
 .column h2 {
     text-align: center;
     font-size: 18px;
     margin: 0;
     padding: 10px 0;
-    background: #007BFF;
+    background: #222222;
     color: #fff;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: text;
+    width: 100%;
 }
 .card {
-    border: 1px solid #ddd;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 10px;
     cursor: grab;
 }
 .card img {
@@ -70,7 +87,180 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    overflow-y: scroll;
+    min-height: 300px;
+    height: 300px;
+    justify-content: center;
+    resize: vertical;
 }
 .initial-list .card {
     width: 300px;
+}
+
+.p_empty {
+    color: #555555;
+}
+
+.labels-conteiner {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.labels-conteiner label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.card {
+    width: 300px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    height: 270px;
+    border: 1px solid rgb(27, 27, 27);
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  #videoUrl, #owner {
+    margin: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #videoUrl {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  #videoUrl:hover {
+    color: #CD201F;
+  }
+  
+  #owner {
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  #owner:hover {
+    color: #CD201F;
+  }
+
+.h1 {
+    margin-top: 0;
+}
+
+.input-section input {
+    background: white;
+    border: 1px solid rgb(229 231 235 / 1);
+    border-radius: 4px;
+    background-color: #fefefe;
+    padding: 0.8rem 0.6rem;
+    flex: 1;
+}
+
+.h1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #f8f8f8;
+}
+    
+
+button {
+    background: white;
+    border: 1px solid rgb(27, 27, 27);
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #171717;
+    color: #fafafa;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+button .lucide {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+button:hover {
+    background-color: #1e1e1e;
+}
+
+.board-container {
+    overflow: scroll;
+    margin-top: 15px;
+    width: 100%;
+    transform: rotateX(180deg);
+    display: block ruby;
+}
+
+.board {
+    overflow: hidden;
+    transform: rotateX(180deg);
+}
+
+.card a {
+  width: fit-content;
+  margin-inline: auto !important;
+  max-width: 90%;
+}
+
+.sort-btn {
+    outline: none;
+}
+
+.card-controls {
+    display: flex;
+
+    & > button {
+        display: flex;
+        border: none;
+        padding: 0.8rem;
+    }
 }

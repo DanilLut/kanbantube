@@ -8,20 +8,40 @@
 </head>
 <body>
     <div class="input-section">
-        <h1>KanbanTube</h1>
-        <input id="boardName" type="text" placeholder="Enter Board Name" value="Untitled YT Board">
-        <input id="playlistUrl" type="text" placeholder="Enter YouTube Playlist URL">
-        <button id="generateButton">Generate Board</button>
+        <h1 class="h1">
+            <span class="h1-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-kanban"><path d="M6 5v11"/><path d="M12 5v6"/><path d="M18 5v14"/></svg>
+                KanbanTube</span>
+            </h1>
+        <div class="labels-conteiner">
+            <label for="boardName">Board name:
+                <input id="boardName" type="text" placeholder="Board Name" value="Untitled">
+            </label>
+            <label for="boardName">YouTube playlist URL:
+            <input id="playlistUrl" type="text" placeholder="Enter YouTube playlist URL">
+            </label>
+            <label for=""><span style="opacity: 0; user-select: none;">a</span>
+                <button id="generateButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-down-dash"><path d="M15 5H9"/><path d="M15 9v3h4l-7 7-7-7h4V9z"/></svg>
+                    Get video list</button>
+            </label>
+        </div>
     </div>
     <div class="video-list-section">
-        <h2>Initial Video List</h2>
-        <div class="initial-list"></div>
+        <h2>Video List</h2>
+        <div class="initial-list">
+            <!-- <span class="p_empty">Empty list.</span> -->
+        </div>
     </div>
     <div class="board-section">
-        <button id="addColumn" style="margin: 20px; padding: 10px;">Add Section</button>
-        <button id="exportData" style="margin: 20px; padding: 10px;">Export Board</button>
-        <button id="importData" style="margin: 20px; padding: 10px;">Import Board</button>
-        <div class="board"></div>
+        <div class="board-section-buttons">
+            <button id="addColumn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add Section</button>
+            <button id="exportData"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-down"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg> Export Board</button>
+            <button id="importData"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-up"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 12v6"/><path d="m15 15-3-3-3 3"/></svg> Import Board</button>
+        </div>
+        <div class="board-container">
+            <div class="board"></div>
+        </div>
     </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
